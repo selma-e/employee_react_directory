@@ -1,19 +1,14 @@
-# Selma's HW12 Employee Tracker
+# Selma's HW19 React Employee Directory
 
 ## Description:
 
-In this activity, I am utilizing the inquirer node package to build an easy terminal interfaced employee management system that is linked to a SQL database. The user can view all employees, departments, and roles in the company. In addition to this, the user can add information to any of these tables in a very simple way. The interface is so easy, that a user would not need to access the database in order to make changes. I did this through the use of 'connection.query' functions and utilized asynchronous callbacks to write and return promises.
-
-## A couple of things I learned in this:
-
-- I learned that asynchronous functions can get pretty messy when they are nested within each other. It's better to deal with them one at a time (at least in my beginner phase).
-- I learned about console.table to display the information in the database to my end user.
-- I could not figure out how to prevent the user from entering a role ID that did not exist in the database.
+In this activity, I am creating an employee directory that utilizes React. The employees are being pulled from the Random User API by thumbnail, first and last name, phone number, email, and date of birth. Every time the page is loaded, 100 different employees will render. In the search bar, I have implemented an OnChange event handler that listens for every change or key entered. For every key entered, the names of the employees will filter based on the string entered. Additionally, I added the functionality of clicking on the full name caret to sort the employees in alphabetical order (ascending and descending). In addition, I organized the API endpoint to only return random users from the United States (to eliminate names appearing in Arabic or Farsi). In the future, I will try to implement sorting other columns in this directory.
 
 ## Installation:
 
-- If you need to pull my code for this homework, please visit my Github repository at: https://github.com/selma-e/Employee_Tracker
-- If you want to see the code in action, please view the video here: https://docusign.zoom.us/rec/share/lCJXtJIp83IXHC2tgxrtaqHlZWXZlSrjWhaBsBd5MtJoFbN4G8C0YU4_hwybTo6S.HDs9U9iSpxIy3NrA?startTime=1612506455000
+- If you need to pull my code for this homework, please visit my Github repository at: https://github.com/selma-e/employee_react_directory
+
+- Please view the deployed code here: https://selma-e.github.io/employee_react_directory/
 
 ## Usage:
 
@@ -21,8 +16,9 @@ In this activity, I am utilizing the inquirer node package to build an easy term
 
 ## Resources Used/Credits:
 
-- https://developer.mozilla.org/en-US/docs/Web/API/Console/table
-- https://www.npmjs.com/package/inquirer
-- https://www.digitalocean.com/community/tutorials/4-uses-of-javascripts-arraymap-you-should-know
+- https://randomuser.me/
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+- https://www.w3schools.com/jsref/event_onchange.asp
 
 © 2021 Selma Elgabalawy | UW-SEA-FSF-PT-08-2020-U-C-TTh

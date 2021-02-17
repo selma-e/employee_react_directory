@@ -13,7 +13,6 @@ class Home extends Component {
     };
   }
 
-  // use handleFilter function with array.filter
   enterInput = (event) => {
     event.preventDefault();
     const name = event.target.name;
@@ -25,7 +24,6 @@ class Home extends Component {
     });
   };
 
-  // use .sort
   sortName = () => {
     console.log("You have clicked the sort by name button");
     this.sortFunc();
@@ -36,7 +34,6 @@ class Home extends Component {
   }
 
   componentWillUnmount() {
-    // fix Warning: Can't perform a React state update on an unmounted component
     this.setState = (state, callback) => {
       return;
     };
@@ -55,7 +52,6 @@ class Home extends Component {
       (result) =>
         filter.test(result.name.first) || filter.test(result.name.last)
     );
-    // this.setState({ result: newArray });
     return newArray;
   };
 
@@ -63,8 +59,8 @@ class Home extends Component {
     let array = this.state.result;
     if (!this.state.ready) {
       array.sort(function (a, b) {
-        var nameA = a.name.first.toUpperCase(); // ignore upper and lowercase
-        var nameB = b.name.first.toUpperCase(); // ignore upper and lowercase
+        var nameA = a.name.first.toUpperCase();
+        var nameB = b.name.first.toUpperCase();
         if (nameA < nameB) {
           return -1;
         }
@@ -78,8 +74,8 @@ class Home extends Component {
       });
     } else {
       array.sort(function (a, b) {
-        var nameA = a.name.first.toUpperCase(); // ignore upper and lowercase
-        var nameB = b.name.first.toUpperCase(); // ignore upper and lowercase
+        var nameA = a.name.first.toUpperCase();
+        var nameB = b.name.first.toUpperCase();
         if (nameA < nameB) {
           return 1;
         }
